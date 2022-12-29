@@ -14,7 +14,14 @@ public class ProductMainPage {
     @FindBy(xpath = "//a[.='Order']")
     WebElement orderButton;
 
+    @FindBy(xpath = "//a[.='View all orders']")
+    WebElement viewAllOrdersButton;
+
     public void clickOrderButton() {
         orderButton.click();
+    }
+
+    public void clickViewAllOrdersButton() {
+        viewAllOrdersButton.click();
     }
 }

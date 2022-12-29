@@ -1,3 +1,4 @@
+@regression
 Feature: Validation of Product
 
   Scenario Outline: Validation of New Product Creation
@@ -6,6 +7,7 @@ Feature: Validation of Product
     And User enters the address information '<name>','<street>','<city>','<zip>'
     And User enters the payment information '<cardType>','<cardNumber>','<expireDate>' and click process button
     Then User validates the message '<message>'
+    And User validates all the information '<name>','<product>','<quantity>','<street>','<city>','<zip>','<cardType>','<cardNumber>','<expireDate>'
     Examples:
       | product     | quantity | name  | street         | city    | zip   | cardType         | cardNumber  | expireDate | message                                |
       | MyMoney     | 4        | Ahmet | Mount-Prospect | Chicago | 60123 | Visa             | 12312312313 | 06/21      | New order has been successfully added. |
